@@ -1,4 +1,11 @@
-<h1>Enter Your Name and favourite food</h1>
+<h1>Enter Your Name and favourite food by clicking
+
+<%= link_to new_food_path do %>
+     Here
+   <% end %>
+</h1>
+
+<h1>Our users favourite foods are:</h1>
 
 <% @foods.each do |food| %>
   <div>
