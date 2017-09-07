@@ -7,4 +7,14 @@ class FoodsController < ApplicationController
   def new
     @food = Food.new
   end
+
+  def create
+    Food.create(food_params)
+    redirect_to root_path
+  end
+
+  def food_params
+    params.require(:food).permit(:name, :food)
+  end
+
 end
